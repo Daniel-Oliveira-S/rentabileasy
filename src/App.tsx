@@ -1,7 +1,19 @@
+import { CheckOffer } from "./components/check-offer";
 import Header from "./components/header";
+import { Icontext } from "./components/icontext";
 import "./styles/App.css";
-import { CheckCircle } from "@phosphor-icons/react";
+import * as react from "react";
 function App() {
+  const [mobile, setMobile] = react.useState(false);
+
+  react.useEffect(() => {
+    function handleResize() {
+      setMobile(window.innerWidth <= 768);
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+  }, []);
+
   return (
     <>
       <Header />
@@ -39,27 +51,30 @@ function App() {
             title="Sobre a rentabileasy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           ></iframe>
-          <div className="about-icons">
-            <div className="icontext">
-              <CheckCircle weight="fill" />
-              <p>
-                Garanta o melhor regime tributário e fiscal para a sua empresa
-              </p>
-            </div>
-            <div className="icontext">
-              <CheckCircle weight="fill" />
-              <p>Controles e processos que evitam desperdicios</p>
-            </div>
-            <div className="icontext">
-              <CheckCircle weight="fill" />
-              <p>Visão completa de todos os indicadores de resultados</p>
-            </div>
-            <div className="icontext">
-              <CheckCircle weight="fill" />
-              <p>Atendimento 100% humanizado, lado a lado com você</p>
-            </div>
+          <Icontext />
+        </section>
+        <section id="offers">
+          <div className="offer-flex">
+            <CheckOffer />
+            <img src="" alt="" />
           </div>
         </section>
+        <section id="indicative">
+          <div className="title-text">
+            <h2>
+              Será que pra quem não sabe para onde ir, qualquer caminho serve,
+              mesmo?
+            </h2>
+            <p>
+              Estudos mostram que a falta de planejamento foi o principal motivo
+              para 95% de empreendedores que fecharam as portas nos últimos
+              anos. Entenda por que é crucial ter a Rentabileasy como seu
+              parceiro de negócios:
+            </p>
+          </div>
+          {mobile ? <img src="" alt="" /> : <img src="" alt="" />}
+        </section>
+        <section id="evolution"></section>
       </main>
     </>
   );
