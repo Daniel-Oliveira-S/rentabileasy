@@ -1,7 +1,5 @@
-import { Cta } from "./cta";
 import "../styles/components.css";
 import react from "react";
-
 export default function Header() {
   const [menu, setMenu] = react.useState(false);
   function handleMenu() {
@@ -30,13 +28,13 @@ export default function Header() {
             <a href="https://news.rentabileasy.com.br/blog/">Blog</a>
           </li>
         </ul>
-        <Cta
+        <a
           href="https://typebot.co/diagnostico-rentabileasy"
-          classname="header"
+          className="header"
           target="_blank"
         >
           Quero um diagnóstico gratuito
-        </Cta>
+        </a>
         <button onClick={handleMenu}>Clique</button>
       </nav>
     </header>
