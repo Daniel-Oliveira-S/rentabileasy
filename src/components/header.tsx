@@ -1,18 +1,33 @@
 import "../styles/components.css";
-import react from "react";
+import react, { useEffect } from "react";
+import logo from "../assets/logo.png";
 export default function Header() {
   const [menu, setMenu] = react.useState(false);
+  const [isVisible, setIsVisible] = react.useState(false);
   function handleMenu() {
     setMenu(!menu);
   }
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 100) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isVisible]);
   return (
     <header>
       <nav id="nav" className={`${menu ? "active" : ""}`}>
-        <a href="" className="logo">
-          <img
-            src="https://www.rentabileasy.com.br/assets/logo-fxJgpJWW.png"
-            alt=""
-          />
+        <a href="#hero" className="logo">
+          <img src={logo} alt="" />
         </a>
         <ul id="menu">
           <li>
@@ -28,13 +43,11 @@ export default function Header() {
             <a href="https://news.rentabileasy.com.br/blog/">Blog</a>
           </li>
         </ul>
-        <a
-          href="https://typebot.co/diagnostico-rentabileasy"
-          className="header"
-          target="_blank"
-        >
-          Quero um diagnóstico gratuito
-        </a>
+        {isVisible && (
+          <a href="#hero" className="header">
+            Fale conosco
+          </a>
+        )}
         <button onClick={handleMenu}>Clique</button>
       </nav>
     </header>

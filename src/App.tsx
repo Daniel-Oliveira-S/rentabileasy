@@ -22,22 +22,11 @@ function App() {
     handleResize();
   }, []);
 
-  const [isVisible, setIsVisible] = react.useState(false);
-  react.useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > 100) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    }
+  function test() {
+    console.log("teste");
+  }
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isVisible]);
+  window.addEventListener("scroll", test);
 
   return (
     <body>

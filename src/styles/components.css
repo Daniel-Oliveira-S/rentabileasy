@@ -263,6 +263,15 @@ li:hover::after {
 }
 
 @media screen and (max-width: 835px) {
+  .header {
+    display: none;
+  }
+  .logo {
+    margin: 0 auto;
+  }
+  #menu {
+    display: none;
+  }
   .about-icons {
     flex-direction: column;
     align-items: center;
