@@ -58,6 +58,11 @@ function App() {
                   Preencha os campos a seguir que entraremos em contato o mais
                   breve possível.
                 </p>
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://rentabileasy.com.br/"
+                />
 
                 <input type="hidden" name="_template" value="table"></input>
                 <input
