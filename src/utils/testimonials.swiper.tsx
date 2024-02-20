@@ -1,9 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "../styles/utils.css";
 export function TestimonialsSwiper() {
   const vera = {
     name1: "Vera Maria Garaude - Garaude escritório de advocacia",
@@ -27,24 +28,25 @@ export function TestimonialsSwiper() {
       pagination={{
         clickable: true,
       }}
-      modules={[Navigation, Pagination]}
+      modules={[Pagination]}
       draggable={true}
       loop={true}
       slidesPerView={1}
       spaceBetween={30}
-      navigation={true}
+      autoplay={true || { delay: 150 }}
+      className="mySwiper"
     >
-      <SwiperSlide>
-        <p>{vera.name1}</p>
+      <SwiperSlide className="slide">
         <p>{vera.text1}</p>
+        <p>{vera.name1}</p>
       </SwiperSlide>
-      <SwiperSlide>
-        <p>{silvana.name2}</p>
+      <SwiperSlide className="slide">
         <p>{silvana.text2}</p>
+        <p>{silvana.name2}</p>
       </SwiperSlide>
-      <SwiperSlide>
-        <p>{juliana.name3}</p>
+      <SwiperSlide className="slide">
         <p>{juliana.text3}</p>
+        <p>{juliana.name3}</p>
       </SwiperSlide>
     </Swiper>
   );
