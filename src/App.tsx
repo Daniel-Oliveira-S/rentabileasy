@@ -22,12 +22,6 @@ function App() {
     handleResize();
   }, []);
 
-  function test() {
-    console.log("teste");
-  }
-
-  window.addEventListener("scroll", test);
-
   return (
     <body>
       <Header />
@@ -169,9 +163,19 @@ function App() {
           </Cta>
         </section>
         <div className="news">
-          <Cta href="#hero" classname="news">
-            Assine nossa newsletter
-          </Cta>
+          <h2>Receba nossa newsletter</h2>
+          <form
+            action="https://formsubmit.co/abileauth@gmail.com"
+            method="post"
+          >
+            <label htmlFor="">
+              Email
+              <input type="email" name="email_newsletter" />
+            </label>
+            <button type="submit">
+              <strong>Quero receber</strong>
+            </button>
+          </form>
         </div>
         <footer>
           <div className="footer-grid">
