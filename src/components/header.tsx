@@ -1,28 +1,15 @@
 import "../styles/components.css";
-import react, { useEffect } from "react";
+import react from "react";
 import logo from "../assets/logo.png";
+import { Cta } from "./cta";
 export default function Header() {
   const [menu, setMenu] = react.useState(false);
-  const [isVisible, setIsVisible] = react.useState(false);
   function handleMenu() {
     setMenu(!menu);
   }
 
-  useEffect(() => {
-    function handleScroll() {
-      if (window.scrollY > 100) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isVisible]);
+  const url = window.location.href;
+  url.replace("#", "");
   return (
     <header>
       <nav id="nav" className={`${menu ? "active" : ""}`}>
@@ -43,11 +30,9 @@ export default function Header() {
             <a href="https://news.rentabileasy.com.br/blog/">Blog</a>
           </li>
         </ul>
-        {isVisible && (
-          <a href="#hero" className="header">
-            Fale conosco
-          </a>
-        )}
+        <Cta href="#hero" classname="header">
+          Fale conosco
+        </Cta>
         <button onClick={handleMenu}>Clique</button>
       </nav>
     </header>

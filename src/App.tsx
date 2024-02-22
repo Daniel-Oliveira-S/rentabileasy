@@ -7,12 +7,27 @@ import { ServicesIconText } from "./components/services-icon-text";
 import "./styles/App.css";
 import * as react from "react";
 import { TestimonialsSwiper } from "./utils/testimonials.swiper";
-import { Phone } from "lucide-react";
+import { ArrowUp, Phone } from "lucide-react";
 import { InstagramLogo } from "@phosphor-icons/react";
 
 import blackWoman from "./assets/black-woman.jpg";
 function App() {
   const [mobile, setMobile] = react.useState(false);
+  const [isVisible, setIsVisible] = react.useState(false);
+
+  react.useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > 800) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+    window.addEventListener("scroll", scrollListener);
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+    };
+  }, [isVisible]);
 
   react.useEffect(() => {
     function handleResize() {
@@ -165,7 +180,7 @@ function App() {
         <div className="news">
           <h2>Receba nossa newsletter</h2>
           <form
-            action="https://formsubmit.co/abileauth@gmail.com"
+            action="https://formsubmit.co/smtpdaniel681@gmail.com"
             method="post"
           >
             <label htmlFor="">
@@ -177,6 +192,24 @@ function App() {
             </button>
           </form>
         </div>
+        {isVisible && (
+          <Cta
+            href="#hero"
+            classname=""
+            style={{
+              position: "fixed",
+              right: "2rem",
+              bottom: "4rem",
+              color: "white",
+              background: "#392f6f",
+              padding: "1rem",
+              borderRadius: ".25rem",
+              boxShadow: "0 0 10px rgba(0, 0, 0, 0.8)",
+            }}
+          >
+            <ArrowUp />
+          </Cta>
+        )}
         <footer>
           <div className="footer-grid">
             <p className="address">
