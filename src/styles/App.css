@@ -153,6 +153,7 @@ form button:hover {
   padding: 5rem 0;
   gap: 2rem;
   margin: 0 auto;
+  scroll-margin-top: 5rem;
 }
 
 #about iframe {
@@ -185,6 +186,7 @@ form button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scroll-margin-top: 5rem;
 }
 .offers {
   display: flex;
@@ -266,6 +268,7 @@ form button:hover {
   width: 90%;
   padding: 4rem 0;
   margin: 0 auto;
+  scroll-margin-top: 5rem;
 }
 
 #services .title-text {
@@ -473,30 +476,5 @@ footer {
 
   .indicative {
     width: 70%;
-  }
-  .footer-grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .footer-copy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #hero {
-    height: 160vh;
-  }
-  .desk {
-    font-size: 2rem;
   }
 }

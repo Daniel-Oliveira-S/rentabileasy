@@ -18,7 +18,7 @@ export default function Header() {
         </a>
         <ul id="menu">
           <li>
-            <a href="#hero">Sobre</a>
+            <a href="#about">Sobre</a>
           </li>
           <li>
             <a href="#services">Para quem</a>
