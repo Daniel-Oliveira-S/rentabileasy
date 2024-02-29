@@ -176,6 +176,7 @@ function App() {
                   name="_honey"
                   style={{ display: "none" }}
                 ></input>
+                <input type="hidden" name="_captcha" value="false"></input>
             <label htmlFor="">
               Email
               <input type="email" name="email_newsletter" />
