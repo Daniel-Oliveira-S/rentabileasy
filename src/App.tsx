@@ -167,7 +167,7 @@ function App() {
         <div className="news">
           <h2>Receba nossa newsletter</h2>
           <form
-            action="https://formsubmit.co/smtpdaniel681@gmail.com"
+            action="https://formsubmit.co/abileauth@gmail.com"
             method="post"
           >
             <label htmlFor="">
