@@ -13,21 +13,8 @@ import { InstagramLogo } from "@phosphor-icons/react";
 import blackWoman from "./assets/black-woman.jpg";
 function App() {
   const [mobile, setMobile] = react.useState(false);
-  const [isVisible, setIsVisible] = react.useState(false);
 
-  react.useEffect(() => {
-    const scrollListener = () => {
-      if (window.scrollY > 800) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-    window.addEventListener("scroll", scrollListener);
-    return () => {
-      window.removeEventListener("scroll", scrollListener);
-    };
-  }, [isVisible]);
+
 
   react.useEffect(() => {
     function handleResize() {
