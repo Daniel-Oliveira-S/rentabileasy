@@ -170,6 +170,12 @@ function App() {
             action="https://formsubmit.co/abileauth@gmail.com"
             method="post"
           >
+                        <input type="hidden" name="_template" value="table"></input>
+                <input
+                  type="text"
+                  name="_honey"
+                  style={{ display: "none" }}
+                ></input>
             <label htmlFor="">
               Email
               <input type="email" name="email_newsletter" />
