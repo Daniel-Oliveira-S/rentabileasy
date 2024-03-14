@@ -36,7 +36,9 @@ export function TestimonialsSwiper() {
       autoplay={true || { delay: 150 }}
       className="mySwiper"
     >
-      <SwiperSlide className="slide">
+      <SwiperSlide className="slide" style={{
+        display: "flex",
+      }}>
         <p>{vera.text1}</p>
         <p>{vera.name1}</p>
       </SwiperSlide>

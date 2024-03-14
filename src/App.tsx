@@ -11,6 +11,7 @@ import { Phone } from "lucide-react";
 import { InstagramLogo } from "@phosphor-icons/react";
 
 import blackWoman from "./assets/black-woman.jpg";
+import { HeroForm, Newsletter } from "./utils/forms";
 function App() {
   const [mobile, setMobile] = react.useState(false);
 
@@ -40,52 +41,7 @@ function App() {
                   negócios dedicados ao crescimento de sua empresa.
                 </p>
               </div>
-              <form
-                action="https://formsubmit.co/abileauth@gmail.com"
-                method="post"
-              >
-                <p>
-                  <strong>
-                    O Rentabileasy te ajuda a descomplicar a burocracia e
-                    impulsionar seu negócio.{" "}
-                  </strong>
-                  <br />
-                  <br />
-                  Preencha os campos a seguir que entraremos em contato o mais
-                  breve possível.
-                </p>
-                <input
-                  type="hidden"
-                  name="_next"
-                  value="https://rentabileasy.com.br/"
-                />
-
-                <input type="hidden" name="_template" value="table"></input>
-                <input
-                  type="text"
-                  name="_honey"
-                  style={{ display: "none" }}
-                ></input>
-                <input type="hidden" name="_captcha" value="false"></input>
-
-                <label htmlFor="">
-                  Nome*
-                  <input type="text" name="nome" required />
-                </label>
-                <label htmlFor="">
-                  Email*
-                  <input type="email" name="email" required />
-                </label>
-                <label htmlFor="">
-                  Telefone*
-                  <input type="tel" name="telefone" required />
-                </label>
-                <label htmlFor="">
-                  Nome da Empresa*
-                  <input type="text" name="empresa" required />
-                </label>
-                <button type="submit">Quero Lucrar Mais!</button>
-              </form>
+              <HeroForm />
             </div>
           </div>
         </section>
@@ -166,25 +122,7 @@ function App() {
         </section>
         <div className="news">
           <h2>Receba nossa newsletter</h2>
-          <form
-            action="https://formsubmit.co/abileauth@gmail.com"
-            method="post"
-          >
-                        <input type="hidden" name="_template" value="table"></input>
-                <input
-                  type="text"
-                  name="_honey"
-                  style={{ display: "none" }}
-                ></input>
-                <input type="hidden" name="_captcha" value="false"></input>
-            <label htmlFor="">
-              Email
-              <input type="email" name="email_newsletter" />
-            </label>
-            <button type="submit">
-              <strong>Quero receber</strong>
-            </button>
-          </form>
+            <Newsletter />
         </div>
 
         <footer>
