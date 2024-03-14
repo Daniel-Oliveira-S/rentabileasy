@@ -125,7 +125,7 @@ function App() {
           <h2>Receba nossa newsletter</h2>
             <Newsletter />
         </div>
-            <a href="" className="whats">
+            <a href="https://api.whatsapp.com/send/?phone=5511961945607&text&type=phone_number&app_absent=0" className="whats" rel="noopener noreferrer" target="_blank">
               <img src={Whatsapp} alt="" />
             </a>
         <footer>
