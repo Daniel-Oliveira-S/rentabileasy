@@ -9,6 +9,7 @@ import * as react from "react";
 import { TestimonialsSwiper } from "./utils/testimonials.swiper";
 import { Phone } from "lucide-react";
 import { InstagramLogo } from "@phosphor-icons/react";
+import Whatsapp from './assets/wp-icon.png'
 
 import blackWoman from "./assets/black-woman.jpg";
 import { HeroForm, Newsletter } from "./utils/forms";
@@ -124,7 +125,9 @@ function App() {
           <h2>Receba nossa newsletter</h2>
             <Newsletter />
         </div>
-
+            <a href="" className="whats">
+              <img src={Whatsapp} alt="" />
+            </a>
         <footer>
           <div className="footer-grid">
             <p className="address">
